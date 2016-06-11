@@ -8,7 +8,7 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-One to two paragraph statement about your product and what it does.
+Creating Login screens is boring and repetitive. What about implementing and customizing them in **less then 10 lines of code**?
 
 ![](LFLoginControllerDemo.gif)
 
@@ -73,7 +73,7 @@ extension ExampleViewController: LFLoginControllerDelegate {
 	
     func forgotPasswordTapped() {
     
-    print("forgot password")
+    	print("forgot password")
   }
 
 }
