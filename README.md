@@ -28,25 +28,25 @@ One to two paragraph statement about your product and what it does.
 ## Installation
 
 #### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+You can use [CocoaPods](http://cocoapods.org/) to install `LFLoginController` by adding it to your `Podfile`:
 
 ```ruby
 platform :ios, '8.0'
 use_frameworks!
-pod 'YourLibrary'
+pod 'LFLoginController'
 ```
 
-To get the full benefits import `YourLibrary` wherever you import UIKit
+To get the full benefits import `LFLoginController` wherever you import UIKit
 
 ``` swift
 import UIKit
-import YourLibrary
+import LFLoginController
 ```
 #### Carthage
-Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
+Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/LFLoginController.framework` to an iOS project.
 
 ```
-github "yourUsername/yourlibrary"
+github "awesome-labs/LFLoginController"
 ```
 #### Manually
 1. Download and drop ```LFLoginController.swift``` in your project.  
@@ -55,11 +55,34 @@ github "yourUsername/yourlibrary"
 ## Usage example
 
 ```swift
-import EZSwiftExtensions
-ez.detectScreenShot { () -> () in
-    print("User took a screen shot")
+//1. Create a LFLoginController instance
+let loginController = LFLoginController()
+
+//2. Present the timePicker
+self.navigationController?.pushViewController(LFLoginController, animated: true)
+
+//3. Implement the LFLoginControllerDelegate
+extension ExampleViewController: LFLoginControllerDelegate {
+
+    func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
+
+        print(email)
+        print(password)
+        print(type)
+	}
+	
+    func forgotPasswordTapped() {
+    
+    print("forgot password")
+  }
+
 }
 ```
+
+## Customizations
+- ```logo: UIImage?```
+- ```loginButtonColor: UIColor?```
+- ```videoURL: NSURL?```
 
 ## Release History
 
@@ -78,7 +101,7 @@ ez.detectScreenShot { () -> () in
 
 ## Contribute
 
-We would love for you to contribute to **YourLibraryName**, check the ``LICENSE`` file for more info.
+We would love for you to contribute to **LFLoginController**, check the ``LICENSE`` file for more info.
 
 ## Meta
 
