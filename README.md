@@ -14,15 +14,15 @@ One to two paragraph statement about your product and what it does.
 
 ## Features
 
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-- [x] Feature 4
-- [x] Feature 5
+- [x] Login
+- [x] Signup
+- [x] Forgot password
+- [x] Ready for all iPhone screen sizes
+- [x] 100% in Swift :large_orange_diamond:
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 9.0+
 - Xcode 7.3
 
 ## Installation
@@ -49,7 +49,7 @@ Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follo
 github "yourUsername/yourlibrary"
 ```
 #### Manually
-1. Download and drop ```YourLibrary.swift``` in your project.  
+1. Download and drop ```LFLoginController.swift``` in your project.  
 2. Congratulations!  
 
 ## Usage example
@@ -82,11 +82,11 @@ We would love for you to contribute to **YourLibraryName**, check the ``LICENSE`
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Lucas Farah – [@7farah7](https://twitter.com/7farah7) – contact@lucasfarah.me
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/awesome-labs](https://github.com/awesome-labs/)
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
