@@ -1,5 +1,5 @@
 # LFLoginController
-> Short blurb about what your product does.
+> Customizable login screen, written in Swift
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
