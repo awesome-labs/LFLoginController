@@ -59,7 +59,7 @@ github "awesome-labs/LFLoginController"
 let loginController = LFLoginController()
 
 //2. Present the timePicker
-self.navigationController?.pushViewController(LFLoginController, animated: true)
+self.navigationController?.pushViewController(loginController, animated: true)
 
 //3. Implement the LFLoginControllerDelegate
 extension ExampleViewController: LFLoginControllerDelegate {
