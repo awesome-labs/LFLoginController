@@ -16,7 +16,7 @@ public protocol LFLoginControllerDelegate: class {
 
 	/// LFLoginControllerDelegate: Called after pressing 'Login' or 'Signup
 	func loginDidFinish(email: String, password: String, type: LFLoginController.SendType)
-  
+
 	func forgotPasswordTapped()
 }
 
@@ -29,7 +29,7 @@ public class LFLoginController: UIViewController {
 
 	var imgvUserIcon = UIImageView()
 	var imgvPasswordIcon = UIImageView()
-  var imgvLogo = UIImageView()
+	var imgvLogo = UIImageView()
 
 	var loginView = UIView()
 	var bottomTxtEmailView = UIView()
@@ -42,28 +42,28 @@ public class LFLoginController: UIViewController {
 	var isLogin = true
 
 	public var delegate: LFLoginControllerDelegate?
-  public enum SendType {
-    
-    case Login
-    case Signup
-  }
+	public enum SendType {
+
+		case Login
+		case Signup
+	}
 
 	// MARK: Customizations
-  
-  ///URL of the background video
+
+	/// URL of the background video
 	public var videoURL: NSURL? {
 		didSet {
 			setupVideoBackgrond()
 		}
 	}
-  
-  ///Logo on the top of the Login page
+
+	/// Logo on the top of the Login page
 	public var logo: UIImage? {
 		didSet {
 			setupLoginLogo()
 		}
 	}
-  
+
 	public var loginButtonColor: UIColor? {
 		didSet {
 			setupLoginButton()
@@ -77,13 +77,22 @@ public class LFLoginController: UIViewController {
 
 	}
 
+	public override func viewWillDisappear(animated: Bool) {
+
+		// Adding Navigation bar again
+		self.navigationController?.setNavigationBarHidden(false, animated: true)
+	}
+
+	public override func viewWillAppear(animated: Bool) {
+
+		// Removing Navigation bar
+		self.navigationController?.setNavigationBarHidden(true, animated: true)
+	}
+
 	public override func viewWillLayoutSubviews() {
 		// Do any additional setup after loading the view, typically from a nib.
 
 		view.backgroundColor = UIColor(red: 224 / 255, green: 68 / 255, blue: 98 / 255, alpha: 1)
-
-		// Removing Navigation bar
-		self.navigationController?.setNavigationBarHidden(true, animated: true)
 
 		setupVideoBackgrond()
 		setupLoginLogo()
@@ -219,14 +228,14 @@ public class LFLoginController: UIViewController {
 
 		butLogin = UIButton(frame: CGRect(x: 0, y: bottomTxtPasswordView.frame.maxY + 30, width: loginView.frame.width, height: 40))
 
-    var buttonColor = UIColor()
+		var buttonColor = UIColor()
 		if let color = loginButtonColor {
 
-      buttonColor = color
+			buttonColor = color
 		} else {
 			buttonColor = UIColor(red: 80 / 255, green: 185 / 255, blue: 167 / 255, alpha: 0.8)
 		}
-    butLogin.backgroundColor = buttonColor
+		butLogin.backgroundColor = buttonColor
 
 		butLogin.setTitle("Login", forState: .Normal)
 		butLogin.addTarget(self, action: #selector(sendTapped), forControlEvents: .TouchUpInside)
