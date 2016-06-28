@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 //    controller.loginButtonColor = UIColor.purpleColor()
 	}
 
-  @IBAction func butLoginTapped(sender: AnyObject) {
+  @IBAction func butLoginTapped(_ sender: AnyObject) {
     
     self.navigationController?.pushViewController(controller, animated: true)
   }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 
 extension ViewController: LFLoginControllerDelegate {
   
-  func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
+  func loginDidFinish(_ email: String, password: String, type: LFLoginController.SendType) {
     
     print(email)
     print(password)

@@ -15,7 +15,7 @@ import AVFoundation
 public protocol LFLoginControllerDelegate: class {
 
 	/// LFLoginControllerDelegate: Called after pressing 'Login' or 'Signup
-	func loginDidFinish(email: String, password: String, type: LFLoginController.SendType)
+	func loginDidFinish(_ email: String, password: String, type: LFLoginController.SendType)
   
 	func forgotPasswordTapped()
 }
@@ -44,14 +44,14 @@ public class LFLoginController: UIViewController {
 	public var delegate: LFLoginControllerDelegate?
   public enum SendType {
     
-    case Login
-    case Signup
+    case login
+    case signup
   }
 
 	// MARK: Customizations
   
   ///URL of the background video
-	public var videoURL: NSURL? {
+	public var videoURL: URL? {
 		didSet {
 			setupVideoBackgrond()
 		}
@@ -107,42 +107,42 @@ public class LFLoginController: UIViewController {
 	// MARK: Background Video Player
 	func setupVideoBackgrond() {
 
-		var theURL = NSURL()
+		var theURL = URL(fileURLWithPath: "")
 		if let url = videoURL {
 
 			theURL = url
 		} else {
 
-			theURL = NSBundle.mainBundle().URLForResource("PolarBear", withExtension: "mov")!
+			theURL = Bundle.main().urlForResource("PolarBear", withExtension: "mov")!
 		}
 
 		var avPlayer = AVPlayer()
-		avPlayer = AVPlayer(URL: theURL)
+		avPlayer = AVPlayer(url: theURL)
 		let avPlayerLayer = AVPlayerLayer(player: avPlayer)
 		avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 		avPlayer.volume = 0
-		avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.None
+		avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.none
 
 		avPlayerLayer.frame = view.layer.bounds
 
 		let layer = UIView(frame: self.view.frame)
 		layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-		view.backgroundColor = UIColor.clearColor()
-		view.layer.insertSublayer(avPlayerLayer, atIndex: 0)
+		view.backgroundColor = UIColor.clear()
+		view.layer.insertSublayer(avPlayerLayer, at: 0)
 		view.addSubview(layer)
 
-		NSNotificationCenter.defaultCenter().addObserver(self,
+		NotificationCenter.default().addObserver(self,
 			selector: #selector(LFLoginController.playerItemDidReachEnd(_:)),
-			name: AVPlayerItemDidPlayToEndTimeNotification,
+			name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
 			object: avPlayer.currentItem)
 
 		avPlayer.play()
 	}
 
-	func playerItemDidReachEnd(notification: NSNotification) {
+	func playerItemDidReachEnd(_ notification: Notification) {
 
 		if let p = notification.object as? AVPlayerItem {
-			p.seekToTime(kCMTimeZero)
+			p.seek(to: kCMTimeZero)
 		}
 	}
 
@@ -182,15 +182,15 @@ public class LFLoginController: UIViewController {
 
 		txtEmail = UITextField(frame: CGRect(x: imgvUserIcon.frame.width + 5, y: 0, width: loginView.frame.width - imgvUserIcon.frame.width - 5, height: 30))
 		txtEmail.delegate = self
-		txtEmail.returnKeyType = .Next
-		txtEmail.autocapitalizationType = .None
-		txtEmail.textColor = UIColor.whiteColor()
-		txtEmail.keyboardType = .EmailAddress
-		txtEmail.attributedPlaceholder = NSAttributedString(string: "Enter your Email", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor().colorWithAlphaComponent(0.5)])
+		txtEmail.returnKeyType = .next
+		txtEmail.autocapitalizationType = .none
+		txtEmail.textColor = UIColor.white()
+		txtEmail.keyboardType = .emailAddress
+		txtEmail.attributedPlaceholder = AttributedString(string: "Enter your Email", attributes: [NSForegroundColorAttributeName: UIColor.white().withAlphaComponent(0.5)])
 		loginView.addSubview(txtEmail)
 
 		bottomTxtEmailView = UIView(frame: CGRect(x: txtEmail.frame.minX - imgvUserIcon.frame.width - 5, y: txtEmail.frame.maxY + 5, width: loginView.frame.width, height: 1))
-		bottomTxtEmailView.backgroundColor = .whiteColor()
+		bottomTxtEmailView.backgroundColor = .white()
 		bottomTxtEmailView.alpha = 0.5
 		loginView.addSubview(bottomTxtEmailView)
 	}
@@ -203,14 +203,14 @@ public class LFLoginController: UIViewController {
 
 		txtPassword = UITextField(frame: CGRect(x: imgvPasswordIcon.frame.width + 5, y: txtEmail.frame.maxY + 10, width: loginView.frame.width - imgvPasswordIcon.frame.width - 5, height: 30))
 		txtPassword.delegate = self
-		txtPassword.returnKeyType = .Done
-		txtPassword.secureTextEntry = true
-		txtPassword.textColor = UIColor.whiteColor()
-		txtPassword.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor().colorWithAlphaComponent(0.5)])
+		txtPassword.returnKeyType = .done
+		txtPassword.isSecureTextEntry = true
+		txtPassword.textColor = UIColor.white()
+		txtPassword.attributedPlaceholder = AttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white().withAlphaComponent(0.5)])
 		loginView.addSubview(txtPassword)
 
 		bottomTxtPasswordView = UIView(frame: CGRect(x: txtPassword.frame.minX - imgvPasswordIcon.frame.width - 5, y: txtPassword.frame.maxY + 5, width: loginView.frame.width, height: 1))
-		bottomTxtPasswordView.backgroundColor = .whiteColor()
+		bottomTxtPasswordView.backgroundColor = .white()
 		bottomTxtPasswordView.alpha = 0.5
 		loginView.addSubview(bottomTxtPasswordView)
 	}
@@ -228,11 +228,11 @@ public class LFLoginController: UIViewController {
 		}
     butLogin.backgroundColor = buttonColor
 
-		butLogin.setTitle("Login", forState: .Normal)
-		butLogin.addTarget(self, action: #selector(sendTapped), forControlEvents: .TouchUpInside)
+		butLogin.setTitle("Login", for: UIControlState())
+		butLogin.addTarget(self, action: #selector(sendTapped), for: .touchUpInside)
 		butLogin.layer.cornerRadius = 5
 		butLogin.layer.borderWidth = 1
-		butLogin.layer.borderColor = UIColor.clearColor().CGColor
+		butLogin.layer.borderColor = UIColor.clear().cgColor
 		loginView.addSubview(butLogin)
 	}
 
@@ -241,18 +241,18 @@ public class LFLoginController: UIViewController {
 		butSignup = UIButton(frame: CGRect(x: 0, y: loginView.frame.maxY - 200, width: loginView.frame.width, height: 40))
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()])
-		butSignup.setAttributedTitle(titleString, forState: .Normal)
+		let titleString = AttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white()])
+		butSignup.setAttributedTitle(titleString, for: UIControlState())
 		butSignup.alpha = 0.7
 
-		butSignup.addTarget(self, action: #selector(signupTapped), forControlEvents: .TouchUpInside)
+		butSignup.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
 		loginView.addSubview(butSignup)
 	}
 
 	// MARK: Button Handlers
 	func sendTapped() {
 
-		let type = isLogin ? SendType.Login : SendType.Signup
+		let type = isLogin ? SendType.login : SendType.signup
 
 		delegate?.loginDidFinish(self.txtEmail.text!, password: self.txtPassword.text!, type: type)
 	}
@@ -271,21 +271,21 @@ public class LFLoginController: UIViewController {
 
 		isLogin = !isLogin
 
-		UIView.animateWithDuration(0.5, animations: {
+		UIView.animate(withDuration: 0.5, animations: {
 			self.butLogin.alpha = 0
-			UIView.animateWithDuration(0.5, animations: {
+			UIView.animate(withDuration: 0.5, animations: {
 				self.butLogin.alpha = 1
 			})
 		})
 
 		let login = isLogin ? "Login" : "Signup"
-		self.butLogin.setTitle(login, forState: .Normal)
+		self.butLogin.setTitle(login, for: UIControlState())
 
 		let signup = isLogin ? "Don't an account? Sign up" : "Have an account? Login"
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: signup, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()])
-		self.butSignup.setAttributedTitle(titleString, forState: .Normal)
+		let titleString = AttributedString(string: signup, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white()])
+		self.butSignup.setAttributedTitle(titleString, for: UIControlState())
 	}
 
 	func setupForgotPasswordButton() {
@@ -293,11 +293,11 @@ public class LFLoginController: UIViewController {
 		butForgotPassword = UIButton(frame: CGRect(x: 0, y: butLogin.frame.maxY, width: loginView.frame.width, height: 40))
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: "Forgot password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()])
-		butForgotPassword.setAttributedTitle(titleString, forState: .Normal)
+		let titleString = AttributedString(string: "Forgot password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white()])
+		butForgotPassword.setAttributedTitle(titleString, for: UIControlState())
 		butForgotPassword.alpha = 0.7
 
-		butForgotPassword.addTarget(self, action: #selector(forgotPasswordTapped), forControlEvents: .TouchUpInside)
+		butForgotPassword.addTarget(self, action: #selector(forgotPasswordTapped), for: .touchUpInside)
 		loginView.addSubview(butForgotPassword)
 	}
 }
@@ -306,18 +306,18 @@ public class LFLoginController: UIViewController {
 extension LFLoginController: UITextFieldDelegate {
 
 	// Animating alpha of bottom line and password icons
-	public func textFieldDidBeginEditing(textField: UITextField) {
+	public func textFieldDidBeginEditing(_ textField: UITextField) {
 
 		// Moving Signup button up
-		UIView.animateWithDuration(0.2, animations: { () -> Void in
+		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 
 			self.butSignup.frame = CGRect(x: 0, y: self.butLogin.frame.maxY, width: self.loginView.frame.width, height: 40)
-			self.butForgotPassword.hidden = true
+			self.butForgotPassword.isHidden = true
 		})
 
 		if textField == txtEmail {
 
-			UIView.animateWithDuration(1, animations: {
+			UIView.animate(withDuration: 1, animations: {
 				self.bottomTxtEmailView.alpha = 1
 				self.imgvUserIcon.alpha = 1
 
@@ -326,7 +326,7 @@ extension LFLoginController: UITextFieldDelegate {
 			})
 		} else {
 
-			UIView.animateWithDuration(1, animations: {
+			UIView.animate(withDuration: 1, animations: {
 				self.imgvUserIcon.alpha = 0.7
 				self.bottomTxtEmailView.alpha = 0.7
 
@@ -336,19 +336,19 @@ extension LFLoginController: UITextFieldDelegate {
 		}
 	}
 
-	public func textFieldDidEndEditing(textField: UITextField) {
+	public func textFieldDidEndEditing(_ textField: UITextField) {
 
 		// Moving signup button down, showing forgot password
-		UIView.animateWithDuration(0.2, animations: { () -> Void in
+		UIView.animate(withDuration: 0.2, animations: { () -> Void in
 
 			self.butSignup.frame = CGRect(x: 0, y: self.loginView.frame.maxY - 200, width: self.loginView.frame.width, height: 40)
 		})
 
-		self.butForgotPassword.hidden = false
+		self.butForgotPassword.isHidden = false
 	}
 
 	// Dealing with return key on keyboard
-	public func textFieldShouldReturn(textField: UITextField) -> Bool {
+	public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
 		if textField == txtEmail {
 
