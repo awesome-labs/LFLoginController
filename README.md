@@ -111,7 +111,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/awesome-labs](https://github.com/awesome-labs/)
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-2.2-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
