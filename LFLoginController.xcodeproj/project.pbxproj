@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C235C89B1D095853004D30EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235C89A1D095853004D30EF /* AppDelegate.swift */; };
-		C235C89D1D095853004D30EF /* LFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235C89C1D095853004D30EF /* LFLoginController.swift */; };
 		C235C8A01D095853004D30EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C235C89E1D095853004D30EF /* Main.storyboard */; };
 		C235C8A21D095853004D30EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C235C8A11D095853004D30EF /* Assets.xcassets */; };
 		C235C8A51D095853004D30EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C235C8A31D095853004D30EF /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		C235C8CF1D096CF5004D30EF /* PolarBear.mov in Resources */ = {isa = PBXBuildFile; fileRef = C235C8CE1D096CF5004D30EF /* PolarBear.mov */; };
 		C236C3561D0BA9E30072A32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C236C3551D0BA9E30072A32C /* ViewController.swift */; };
 		C236C3581D0BBBDD0072A32C /* Earth.mov in Resources */ = {isa = PBXBuildFile; fileRef = C236C3571D0BBBDD0072A32C /* Earth.mov */; };
+		C2BC635A1D222DA9009D3778 /* LFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BC63591D222DA9009D3778 /* LFLoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		C235C8971D095853004D30EF /* LFLoginController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFLoginController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C235C89A1D095853004D30EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C235C89C1D095853004D30EF /* LFLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFLoginController.swift; sourceTree = "<group>"; };
 		C235C89F1D095853004D30EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C235C8A11D095853004D30EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C235C8A41D095853004D30EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		C235C8CE1D096CF5004D30EF /* PolarBear.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PolarBear.mov; sourceTree = "<group>"; };
 		C236C3551D0BA9E30072A32C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C236C3571D0BBBDD0072A32C /* Earth.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Earth.mov; sourceTree = "<group>"; };
+		C2BC63591D222DA9009D3778 /* LFLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFLoginController.swift; path = Sources/LFLoginController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +103,9 @@
 		C235C8991D095853004D30EF /* LFLoginController */ = {
 			isa = PBXGroup;
 			children = (
+				C2BC63591D222DA9009D3778 /* LFLoginController.swift */,
 				C235C89A1D095853004D30EF /* AppDelegate.swift */,
 				C236C3551D0BA9E30072A32C /* ViewController.swift */,
-				C235C89C1D095853004D30EF /* LFLoginController.swift */,
 				C235C8CE1D096CF5004D30EF /* PolarBear.mov */,
 				C236C3571D0BBBDD0072A32C /* Earth.mov */,
 				C235C89E1D095853004D30EF /* Main.storyboard */,
@@ -284,8 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BC635A1D222DA9009D3778 /* LFLoginController.swift in Sources */,
 				C236C3561D0BA9E30072A32C /* ViewController.swift in Sources */,
-				C235C89D1D095853004D30EF /* LFLoginController.swift in Sources */,
 				C235C89B1D095853004D30EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

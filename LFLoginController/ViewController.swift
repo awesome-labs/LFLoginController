@@ -40,6 +40,7 @@ extension ViewController: LFLoginControllerDelegate {
   
   func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
     
+    self.navigationController?.popViewControllerAnimated(true)
     print(email)
     print(password)
     print(type)

@@ -5,6 +5,8 @@
 //  Created by Lucas Farah on 6/9/16.
 //  Copyright © 2016 Lucas Farah. All rights reserved.
 //
+// swiftlint:disable line_length
+// swiftlint:disable trailing_whitespace
 
 import XCTest
 
