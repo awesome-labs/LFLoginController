@@ -13,23 +13,23 @@ import UIKit
 class ViewController: UIViewController {
 
 	let controller = LFLoginController()
-  
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-    controller.delegate = self
-    
-    //Customizations
+		controller.delegate = self
+
+		// Customizations
 //    controller.videoURL = NSBundle.mainBundle().URLForResource("Earth", withExtension: "mov")!
 //    controller.logo = UIImage(named: "user")
 //    controller.loginButtonColor = UIColor.purpleColor()
 	}
 
-  @IBAction func butLoginTapped(sender: AnyObject) {
-    
-    self.navigationController?.pushViewController(controller, animated: true)
-  }
-  
+	@IBAction func butLoginTapped(sender: AnyObject) {
+
+		self.navigationController?.pushViewController(controller, animated: true)
+	}
+
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -37,17 +37,22 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: LFLoginControllerDelegate {
-  
-  func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
-    
-    self.navigationController?.popViewControllerAnimated(true)
-    print(email)
-    print(password)
-    print(type)
-  }
-  
-  func forgotPasswordTapped() {
-    
-    print("forgot password")
-  }
+
+	func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
+
+//    self.navigationController?.popViewControllerAnimated(true)
+
+		print(email)
+		print(password)
+		print(type)
+
+		if type == .Login && password != "1234" {
+			controller.wrongInfoShake()
+		}
+	}
+
+	func forgotPasswordTapped() {
+
+		print("forgot password")
+	}
 }
