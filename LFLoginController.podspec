@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/awesome-labs/LFLoginController.git", :tag => s.version }
   s.source_files  = "Sources/"
-  s.resources = ['Resources/*.png']
+  s.resource_bundle = ['Resources/*.png']
   s.requires_arc = true
 end
