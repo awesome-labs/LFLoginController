@@ -11,6 +11,7 @@
 
 import UIKit
 import AVFoundation
+import OnePasswordExtension
 
 //MARK: - LFTimePickerDelegate
 public protocol LFLoginControllerDelegate: class {
@@ -271,7 +272,7 @@ public class LFLoginController: UIViewController {
 		if appName != "" && appUrl != "" {
 			setupOnePassword(appName, appUrl: appUrl)
 		}
-        
+
 		view.addSubview(loginView)
 	}
 
