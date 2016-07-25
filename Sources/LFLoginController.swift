@@ -7,6 +7,7 @@
 //
 // swiftlint:disable line_length
 // swiftlint:disable trailing_whitespace
+// swiftlint:disable type_body_length
 
 import UIKit
 import AVFoundation
@@ -24,163 +25,163 @@ public class LFLoginController: UIViewController {
 
 	// MARK: - Variables
 
-    let domainNames = ["gmail.com",
-                       "yahoo.com",
-                       "hotmail.com",
-                       "aol.com",
-                       "comcast.net",
-                       "me.com",
-                       "msn.com",
-                       "live.com",
-                       "sbcglobal.net",
-                       "ymail.com",
-                       "att.net",
-                       "mac.com",
-                       "cox.net",
-                       "verizon.net",
-                       "hotmail.co.uk",
-                       "bellsouth.net",
-                       "rocketmail.com",
-                       "aim.com",
-                       "yahoo.co.uk",
-                       "earthlink.net",
-                       "charter.net",
-                       "optonline.net",
-                       "shaw.ca",
-                       "yahoo.ca",
-                       "googlemail.com",
-                       "mail.com",
-                       "qq.com",
-                       "btinternet.com",
-                       "mail.ru",
-                       "live.co.uk",
-                       "naver.com",
-                       "rogers.com",
-                       "juno.com",
-                       "yahoo.com.tw",
-                       "live.ca",
-                       "walla.com",
-                       "163.com",
-                       "roadrunner.com",
-                       "telus.net",
-                       "embarqmail.com",
-                       "hotmail.fr",
-                       "pacbell.net",
-                       "sky.com",
-                       "sympatico.ca",
-                       "cfl.rr.com",
-                       "tampabay.rr.com",
-                       "q.com",
-                       "yahoo.co.in",
-                       "yahoo.fr",
-                       "hotmail.ca",
-                       "windstream.net",
-                       "hotmail.it",
-                       "web.de",
-                       "asu.edu",
-                       "gmx.de",
-                       "gmx.com",
-                       "insightbb.com",
-                       "netscape.net",
-                       "icloud.com",
-                       "frontier.com",
-                       "126.com",
-                       "hanmail.net",
-                       "suddenlink.net",
-                       "netzero.net",
-                       "mindspring.com",
-                       "ail.com",
-                       "windowslive.com",
-                       "netzero.com",
-                       "yahoo.com.hk",
-                       "yandex.ru",
-                       "mchsi.com",
-                       "cableone.net",
-                       "yahoo.com.cn",
-                       "yahoo.es",
-                       "yahoo.com.br",
-                       "cornell.edu",
-                       "ucla.edu",
-                       "us.army.mil",
-                       "excite.com",
-                       "ntlworld.com",
-                       "usc.edu",
-                       "nate.com",
-                       "outlook.com",
-                       "nc.rr.com",
-                       "prodigy.net",
-                       "wi.rr.com",
-                       "videotron.ca",
-                       "yahoo.it",
-                       "yahoo.com.au",
-                       "umich.edu",
-                       "ameritech.net",
-                       "libero.it",
-                       "yahoo.de",
-                       "rochester.rr.com",
-                       "cs.com",
-                       "frontiernet.net",
-                       "swbell.net",
-                       "msu.edu",
-                       "ptd.net",
-                       "proxymail.facebook.com",
-                       "hotmail.es",
-                       "austin.rr.com",
-                       "nyu.edu",
-                       "sina.com",
-                       "centurytel.net",
-                       "usa.net",
-                       "nycap.rr.com",
-                       "uci.edu",
-                       "hotmail.de",
-                       "yahoo.com.sg",
-                       "email.arizona.edu",
-                       "yahoo.com.mx",
-                       "ufl.edu",
-                       "bigpond.com",
-                       "unlv.nevada.edu",
-                       "yahoo.cn",
-                       "ca.rr.com",
-                       "google.com",
-                       "yahoo.co.id",
-                       "inbox.com",
-                       "fuse.net",
-                       "hawaii.rr.com",
-                       "talktalk.net",
-                       "gmx.net",
-                       "walla.co.il",
-                       "ucdavis.edu",
-                       "carolina.rr.com",
-                       "comcast.com",
-                       "live.fr",
-                       "blueyonder.co.uk",
-                       "live.cn",
-                       "cogeco.ca",
-                       "abv.bg",
-                       "tds.net",
-                       "centurylink.net",
-                       "yahoo.com.vn",
-                       "uol.com.br",
-                       "osu.edu",
-                       "san.rr.com",
-                       "rcn.com",
-                       "umn.edu",
-                       "live.nl",
-                       "live.com.au",
-                       "tx.rr.com",
-                       "eircom.net",
-                       "sasktel.net",
-                       "post.harvard.edu",
-                       "snet.net",
-                       "wowway.com",
-                       "live.it",
-                       "hoteltonight.com",
-                       "att.com",
-                       "vt.edu",
-                       "rambler.ru",
-                       "temple.edu",
-                       "cinci.rr.com"]
-    
+	let domainNames = ["gmail.com",
+		"yahoo.com",
+		"hotmail.com",
+		"aol.com",
+		"comcast.net",
+		"me.com",
+		"msn.com",
+		"live.com",
+		"sbcglobal.net",
+		"ymail.com",
+		"att.net",
+		"mac.com",
+		"cox.net",
+		"verizon.net",
+		"hotmail.co.uk",
+		"bellsouth.net",
+		"rocketmail.com",
+		"aim.com",
+		"yahoo.co.uk",
+		"earthlink.net",
+		"charter.net",
+		"optonline.net",
+		"shaw.ca",
+		"yahoo.ca",
+		"googlemail.com",
+		"mail.com",
+		"qq.com",
+		"btinternet.com",
+		"mail.ru",
+		"live.co.uk",
+		"naver.com",
+		"rogers.com",
+		"juno.com",
+		"yahoo.com.tw",
+		"live.ca",
+		"walla.com",
+		"163.com",
+		"roadrunner.com",
+		"telus.net",
+		"embarqmail.com",
+		"hotmail.fr",
+		"pacbell.net",
+		"sky.com",
+		"sympatico.ca",
+		"cfl.rr.com",
+		"tampabay.rr.com",
+		"q.com",
+		"yahoo.co.in",
+		"yahoo.fr",
+		"hotmail.ca",
+		"windstream.net",
+		"hotmail.it",
+		"web.de",
+		"asu.edu",
+		"gmx.de",
+		"gmx.com",
+		"insightbb.com",
+		"netscape.net",
+		"icloud.com",
+		"frontier.com",
+		"126.com",
+		"hanmail.net",
+		"suddenlink.net",
+		"netzero.net",
+		"mindspring.com",
+		"ail.com",
+		"windowslive.com",
+		"netzero.com",
+		"yahoo.com.hk",
+		"yandex.ru",
+		"mchsi.com",
+		"cableone.net",
+		"yahoo.com.cn",
+		"yahoo.es",
+		"yahoo.com.br",
+		"cornell.edu",
+		"ucla.edu",
+		"us.army.mil",
+		"excite.com",
+		"ntlworld.com",
+		"usc.edu",
+		"nate.com",
+		"outlook.com",
+		"nc.rr.com",
+		"prodigy.net",
+		"wi.rr.com",
+		"videotron.ca",
+		"yahoo.it",
+		"yahoo.com.au",
+		"umich.edu",
+		"ameritech.net",
+		"libero.it",
+		"yahoo.de",
+		"rochester.rr.com",
+		"cs.com",
+		"frontiernet.net",
+		"swbell.net",
+		"msu.edu",
+		"ptd.net",
+		"proxymail.facebook.com",
+		"hotmail.es",
+		"austin.rr.com",
+		"nyu.edu",
+		"sina.com",
+		"centurytel.net",
+		"usa.net",
+		"nycap.rr.com",
+		"uci.edu",
+		"hotmail.de",
+		"yahoo.com.sg",
+		"email.arizona.edu",
+		"yahoo.com.mx",
+		"ufl.edu",
+		"bigpond.com",
+		"unlv.nevada.edu",
+		"yahoo.cn",
+		"ca.rr.com",
+		"google.com",
+		"yahoo.co.id",
+		"inbox.com",
+		"fuse.net",
+		"hawaii.rr.com",
+		"talktalk.net",
+		"gmx.net",
+		"walla.co.il",
+		"ucdavis.edu",
+		"carolina.rr.com",
+		"comcast.com",
+		"live.fr",
+		"blueyonder.co.uk",
+		"live.cn",
+		"cogeco.ca",
+		"abv.bg",
+		"tds.net",
+		"centurylink.net",
+		"yahoo.com.vn",
+		"uol.com.br",
+		"osu.edu",
+		"san.rr.com",
+		"rcn.com",
+		"umn.edu",
+		"live.nl",
+		"live.com.au",
+		"tx.rr.com",
+		"eircom.net",
+		"sasktel.net",
+		"post.harvard.edu",
+		"snet.net",
+		"wowway.com",
+		"live.it",
+		"hoteltonight.com",
+		"att.com",
+		"vt.edu",
+		"rambler.ru",
+		"temple.edu",
+		"cinci.rr.com"]
+
 	var txtEmail = AutoCompleteTextField()
 	var txtPassword = UITextField()
 
@@ -195,6 +196,11 @@ public class LFLoginController: UIViewController {
 	var butLogin = UIButton()
 	var butSignup = UIButton()
 	var butForgotPassword = UIButton()
+
+	// 1Password
+	var butOnePassword = UIButton()
+	var appName = ""
+	var appUrl = ""
 
 	var isLogin = true
 
@@ -231,7 +237,7 @@ public class LFLoginController: UIViewController {
 
 	override public func viewDidLoad() {
 		super.viewDidLoad()
-        
+
 	}
 
 	public override func viewWillDisappear(animated: Bool) {
@@ -262,6 +268,10 @@ public class LFLoginController: UIViewController {
 		setupSignupButton()
 		setupForgotPasswordButton()
 
+		if appName != "" && appUrl != "" {
+			setupOnePassword(appName, appUrl: appUrl)
+		}
+        
 		view.addSubview(loginView)
 	}
 
@@ -348,12 +358,12 @@ public class LFLoginController: UIViewController {
 
 		txtEmail = AutoCompleteTextField(frame: CGRect(x: imgvUserIcon.frame.width + 5, y: 0, width: loginView.frame.width - imgvUserIcon.frame.width - 5, height: 30))
 		txtEmail.delegate = self
-        txtEmail.autoCompleteTextFieldDataSource = self
-        txtEmail.setDelimiter("@")
-        txtEmail.dataSource = self
-        
-        // Show right side complete button
-        txtEmail.showAutoCompleteButton(autoCompleteButtonViewMode: .WhileEditing)
+		txtEmail.autoCompleteTextFieldDataSource = self
+		txtEmail.setDelimiter("@")
+		txtEmail.dataSource = self
+
+		// Show right side complete button
+		txtEmail.showAutoCompleteButton(autoCompleteButtonViewMode: .WhileEditing)
 
 		txtEmail.returnKeyType = .Next
 		txtEmail.autocapitalizationType = .None
@@ -436,6 +446,19 @@ public class LFLoginController: UIViewController {
 		loginView.addSubview(butForgotPassword)
 	}
 
+	public func setupOnePassword(appName: String, appUrl: String) {
+
+		self.appName = appName
+		self.appUrl = appUrl
+
+		butOnePassword = UIButton(frame: CGRect(x: txtPassword.frame.maxX - imgvPasswordIcon.frame.width, y: txtPassword.frame.origin.y, width: imgvPasswordIcon.frame.width, height: imgvPasswordIcon.frame.height))
+		butOnePassword.setImage(UIImage(named: "onepassword-button-light"), forState: .Normal)
+		butOnePassword.addTarget(self, action: #selector(onePasswordTapped), forControlEvents: .TouchUpInside)
+		butOnePassword.hidden = !OnePasswordExtension.sharedExtension().isAppExtensionAvailable()
+		loginView.addSubview(butOnePassword)
+		print(butOnePassword.frame)
+	}
+
 	// MARK: Button Handlers
 	func sendTapped() {
 
@@ -452,6 +475,51 @@ public class LFLoginController: UIViewController {
 	func forgotPasswordTapped() {
 
 		delegate?.forgotPasswordTapped()
+	}
+
+	func onePasswordTapped() {
+
+		if isLogin {
+			OnePasswordExtension.sharedExtension().findLoginForURLString(appUrl, forViewController: self, sender: nil) { (dicLogin, error) in
+
+				if let dic = dicLogin where dic.count == 0 {
+
+					if Int32((error?.code)!) != AppExtensionErrorCodeCancelledByUser {
+
+						print("1Password Extension error: \(error)")
+					}
+					return
+				}
+
+				if let dic = dicLogin, email = dic[AppExtensionUsernameKey] as? String, password = dic[AppExtensionPasswordKey] as? String {
+					self.txtEmail.text = email
+					self.txtPassword.text = password
+				}
+			}
+		} else {
+
+			let loginDetails: [NSObject: AnyObject] = [AppExtensionTitleKey: appName,
+				AppExtensionUsernameKey: (self.txtEmail.text != nil ? self.txtEmail.text : "")!,
+				AppExtensionPasswordKey: (self.txtPassword.text != nil ? self.txtPassword.text : "")!,
+			]
+
+			OnePasswordExtension.sharedExtension().storeLoginForURLString(appUrl, loginDetails: loginDetails, passwordGenerationOptions: nil, forViewController: self, sender: nil, completion: { (loginDictionary, error) in
+
+				if loginDictionary!.count == 0 {
+
+					if Int32((error?.code)!) != AppExtensionErrorCodeCancelledByUser {
+
+						print("1Password Extension error: \(error)")
+					}
+					return
+				}
+
+				if let dic = loginDictionary, email = dic[AppExtensionUsernameKey] as? String, password = dic[AppExtensionPasswordKey] as? String {
+					self.txtEmail.text = email
+					self.txtPassword.text = password
+				}
+			})
+		}
 	}
 
 	func toggleLoginSignup() {
@@ -524,7 +592,7 @@ extension LFLoginController: UITextFieldDelegate {
 
 	// Animating alpha of bottom line and password icons
 	public func textFieldDidBeginEditing(textField: UITextField) {
-        
+
 		// Moving Signup button up
 		UIView.animateWithDuration(0.2, animations: { () -> Void in
 
@@ -538,14 +606,14 @@ extension LFLoginController: UITextFieldDelegate {
 				self.bottomTxtEmailView.alpha = 1
 				self.imgvUserIcon.alpha = 1
 
-				self.bottomTxtPasswordView.alpha = 0.7
-				self.imgvPasswordIcon.alpha = 0.7
+				self.bottomTxtPasswordView.alpha = 0.2
+				self.imgvPasswordIcon.alpha = 0.2
 			})
 		} else {
 
 			UIView.animateWithDuration(1, animations: {
-				self.imgvUserIcon.alpha = 0.7
-				self.bottomTxtEmailView.alpha = 0.7
+				self.imgvUserIcon.alpha = 0.2
+				self.bottomTxtEmailView.alpha = 0.2
 
 				self.bottomTxtPasswordView.alpha = 1
 				self.imgvPasswordIcon.alpha = 1
@@ -562,8 +630,14 @@ extension LFLoginController: UITextFieldDelegate {
 		})
 
 		self.butForgotPassword.hidden = false
+		self.imgvUserIcon.alpha = 1
+		self.bottomTxtEmailView.alpha = 1
+
+		self.bottomTxtPasswordView.alpha = 1
+		self.imgvPasswordIcon.alpha = 1
+
 	}
-    
+
 	// Dealing with return key on keyboard
 	public func textFieldShouldReturn(textField: UITextField) -> Bool {
 
@@ -580,9 +654,9 @@ extension LFLoginController: UITextFieldDelegate {
 }
 
 extension LFLoginController: AutoCompleteTextFieldDataSource {
-    
-    public func autoCompleteTextFieldDataSource(autoCompleteTextField: AutoCompleteTextField) -> [String] {
-        
-        return domainNames
-    }
+
+	public func autoCompleteTextFieldDataSource(autoCompleteTextField: AutoCompleteTextField) -> [String] {
+
+		return domainNames
+	}
 }

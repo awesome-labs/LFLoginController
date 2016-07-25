@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 //    controller.videoURL = NSBundle.mainBundle().URLForResource("Earth", withExtension: "mov")!
 //    controller.logo = UIImage(named: "user")
 //    controller.loginButtonColor = UIColor.purpleColor()
+//    controller.setupOnePassword("YourAppName", appUrl: "YourAppURL")
 	}
 
 	@IBAction func butLoginTapped(sender: AnyObject) {
@@ -40,15 +41,20 @@ extension ViewController: LFLoginControllerDelegate {
 
 	func loginDidFinish(email: String, password: String, type: LFLoginController.SendType) {
 
-//    self.navigationController?.popViewControllerAnimated(true)
+        // Implement your server call here
 
 		print(email)
 		print(password)
 		print(type)
 
+        // Example
 		if type == .Login && password != "1234" {
+            
 			controller.wrongInfoShake()
-		}
+        } else {
+            
+            navigationController?.popViewControllerAnimated(true)
+        }
 	}
 
 	func forgotPasswordTapped() {
