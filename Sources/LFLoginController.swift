@@ -356,7 +356,8 @@ public class LFLoginController: UIViewController {
 	func setupEmailField() {
 
 		imgvUserIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-		imgvUserIcon.image = UIImage(named: "user")
+		let bundle = NSBundle(forClass: LFLoginController.self)
+		imgvUserIcon.image = UIImage(named: "user", inBundle: bundle, compatibleWithTraitCollection: nil)
 		loginView.addSubview(imgvUserIcon)
 
 		txtEmail = AutoCompleteTextField(frame: CGRect(x: imgvUserIcon.frame.width + 5, y: 0, width: loginView.frame.width - imgvUserIcon.frame.width - 5, height: 30))
@@ -385,7 +386,9 @@ public class LFLoginController: UIViewController {
 	func setupPasswordField() {
 
 		imgvPasswordIcon = UIImageView(frame: CGRect(x: 0, y: txtEmail.frame.maxY + 10, width: 30, height: 30))
-		imgvPasswordIcon.image = UIImage(named: "password")
+
+		let bundle = NSBundle(forClass: LFLoginController.self)
+		imgvPasswordIcon.image = UIImage(named: "password", inBundle: bundle, compatibleWithTraitCollection: nil)
 		loginView.addSubview(imgvPasswordIcon)
 
 		txtPassword = UITextField(frame: CGRect(x: imgvPasswordIcon.frame.width + 5, y: txtEmail.frame.maxY + 10, width: loginView.frame.width - imgvPasswordIcon.frame.width - 5, height: 30))
