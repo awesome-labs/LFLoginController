@@ -256,10 +256,16 @@ public class LFLoginController: UIViewController {
 	public override func viewWillLayoutSubviews() {
 		// Do any additional setup after loading the view, typically from a nib.
 
+	}
+
+	convenience init() {
+		self.init(nibName: nil, bundle: nil)
+
+		print("layout")
 		view.backgroundColor = UIColor(red: 224 / 255, green: 68 / 255, blue: 98 / 255, alpha: 1)
 
-		setupVideoBackgrond()
-		setupLoginLogo()
+//        setupVideoBackgrond()
+//        setupLoginLogo()
 
 		// Login
 		setupLoginView()
@@ -268,10 +274,6 @@ public class LFLoginController: UIViewController {
 		setupLoginButton()
 		setupSignupButton()
 		setupForgotPasswordButton()
-
-		if appName != "" && appUrl != "" {
-			setupOnePassword(appName, appUrl: appUrl)
-		}
 
 		view.addSubview(loginView)
 	}
@@ -287,33 +289,35 @@ public class LFLoginController: UIViewController {
 		var theURL = NSURL()
 		if let url = videoURL {
 
+			let shade = UIView(frame: self.view.frame)
+			shade.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+			view.addSubview(shade)
+			view.sendSubviewToBack(shade)
+
 			theURL = url
-		} else {
 
-			theURL = NSBundle.mainBundle().URLForResource("PolarBear", withExtension: "mov")!
+			var avPlayer = AVPlayer()
+			avPlayer = AVPlayer(URL: theURL)
+			let avPlayerLayer = AVPlayerLayer(player: avPlayer)
+			avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+			avPlayer.volume = 0
+			avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.None
+
+			avPlayerLayer.frame = view.layer.bounds
+
+			let layer = UIView(frame: self.view.frame)
+			view.backgroundColor = UIColor.clearColor()
+			view.layer.insertSublayer(avPlayerLayer, atIndex: 0)
+			view.addSubview(layer)
+			view.sendSubviewToBack(layer)
+
+			NSNotificationCenter.defaultCenter().addObserver(self,
+				selector: #selector(LFLoginController.playerItemDidReachEnd(_:)),
+				name: AVPlayerItemDidPlayToEndTimeNotification,
+				object: avPlayer.currentItem)
+
+			avPlayer.play()
 		}
-
-		var avPlayer = AVPlayer()
-		avPlayer = AVPlayer(URL: theURL)
-		let avPlayerLayer = AVPlayerLayer(player: avPlayer)
-		avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-		avPlayer.volume = 0
-		avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.None
-
-		avPlayerLayer.frame = view.layer.bounds
-
-		let layer = UIView(frame: self.view.frame)
-		layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-		view.backgroundColor = UIColor.clearColor()
-		view.layer.insertSublayer(avPlayerLayer, atIndex: 0)
-		view.addSubview(layer)
-
-		NSNotificationCenter.defaultCenter().addObserver(self,
-			selector: #selector(LFLoginController.playerItemDidReachEnd(_:)),
-			name: AVPlayerItemDidPlayToEndTimeNotification,
-			object: avPlayer.currentItem)
-
-		avPlayer.play()
 	}
 
 	func playerItemDidReachEnd(notification: NSNotification) {
@@ -332,18 +336,16 @@ public class LFLoginController: UIViewController {
 		if let loginLogo = logo {
 
 			imgvLogo.image = loginLogo
-		} else {
 
-			imgvLogo.image = UIImage(named: "AwesomeLabsLogoWhite")
+			view.addSubview(imgvLogo)
 		}
-		view.addSubview(imgvLogo)
 	}
 
 	// MARK: Login View
 	func setupLoginView() {
 
 		let loginX: CGFloat = 20
-		let loginY = imgvLogo.frame.maxY + 40
+		let loginY = CGFloat(130 + 40)
 		let loginWidth = self.view.bounds.width - 40
 		let loginHeight: CGFloat = self.view.bounds.height - loginY - 30
 		print(loginHeight)
@@ -506,7 +508,7 @@ public class LFLoginController: UIViewController {
 
 			OnePasswordExtension.sharedExtension().storeLoginForURLString(appUrl, loginDetails: loginDetails, passwordGenerationOptions: nil, forViewController: self, sender: nil, completion: { (loginDictionary, error) in
 
-				if loginDictionary!.count == 0 {
+				if let dic = loginDictionary where dic.count == 0 {
 
 					if Int32((error?.code)!) != AppExtensionErrorCodeCancelledByUser {
 
