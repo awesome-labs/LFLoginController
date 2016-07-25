@@ -11,7 +11,7 @@
 
 import UIKit
 import AVFoundation
-import OnePasswordExtension
+//import OnePasswordExtension
 
 //MARK: - LFTimePickerDelegate
 public protocol LFLoginControllerDelegate: class {
@@ -264,8 +264,8 @@ public class LFLoginController: UIViewController {
 		print("layout")
 		view.backgroundColor = UIColor(red: 224 / 255, green: 68 / 255, blue: 98 / 255, alpha: 1)
 
-//        setupVideoBackgrond()
-//        setupLoginLogo()
+		// setupVideoBackgrond()
+		// setupLoginLogo()
 
 		// Login
 		setupLoginView()
@@ -549,7 +549,7 @@ public class LFLoginController: UIViewController {
 
 	// MARK: - Wrong Info Shake Animations
 
-	func wrongInfoShake() {
+	public func wrongInfoShake() {
 
 		self.setWrongUI()
 		self.txtEmail.shake()

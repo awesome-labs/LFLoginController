@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.dependency '1PasswordExtension', '1.8.2'
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/awesome-labs/LFLoginController.git", :tag => s.version }
-  s.source_files  = "Sources/*.swift"
+  s.source_files  = "Sources/"
   s.requires_arc = true
 end
