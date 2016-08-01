@@ -1,0 +1,6 @@
+framework module LFLoginController {
+  umbrella header "LFLoginController-umbrella.h"
+
+  export *
+  module * { export * }
+}

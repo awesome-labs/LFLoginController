@@ -1,0 +1,6 @@
+framework module Pods_LFLoginControllerExampleUITests {
+  umbrella header "Pods-LFLoginControllerExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
