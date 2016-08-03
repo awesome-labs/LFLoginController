@@ -11,7 +11,7 @@
 
 import UIKit
 import AVFoundation
-import OnePasswordExtension
+//import OnePasswordExtension
 
 //MARK: - LFTimePickerDelegate
 public protocol LFLoginControllerDelegate: class {
