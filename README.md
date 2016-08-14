@@ -19,6 +19,7 @@ Creating Login screens is boring and repetitive. What about implementing and cus
 - [x] Forgot password
 - [x] Ready for all iPhone screen sizes
 - [x] 100% in Swift :large_orange_diamond:
+- [x] 1Password
 
 ## Requirements
 
