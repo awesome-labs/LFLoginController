@@ -205,7 +205,7 @@ public class LFLoginController: UIViewController {
 
 	var isLogin = true
 
-	public var delegate: LFLoginControllerDelegate?
+	public weak var delegate: LFLoginControllerDelegate?
 	public enum SendType {
 
 		case Login
