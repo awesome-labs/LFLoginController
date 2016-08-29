@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LFLoginController"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "Creating Login screens is boring and repetitive. What about implementing and customizing them in less then 10 lines of code?"
   s.homepage     = "https://github.com/awesome-labs/LFLoginController/"
   s.license      = { :type => "MIT", :file => "LICENSE" }
