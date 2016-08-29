@@ -183,29 +183,29 @@ public class LFLoginController: UIViewController {
 		"temple.edu",
 		"cinci.rr.com"]
 
-	var txtEmail = AutoCompleteTextField()
-	var txtPassword = UITextField()
+    var txtEmail: AutoCompleteTextField!
+    var txtPassword: UITextField!
 
-	var imgvUserIcon = UIImageView()
-	var imgvPasswordIcon = UIImageView()
-	var imgvLogo = UIImageView()
+    var imgvUserIcon: UIImageView!
+    var imgvPasswordIcon: UIImageView!
+    var imgvLogo: UIImageView!
 
-	var loginView = UIView()
-	var bottomTxtEmailView = UIView()
-	var bottomTxtPasswordView = UIView()
+    var loginView: UIView!
+    var bottomTxtEmailView: UIView!
+    var bottomTxtPasswordView: UIView!
 
-	var butLogin = UIButton()
-	var butSignup = UIButton()
-	var butForgotPassword = UIButton()
+    var butLogin: UIButton!
+    var butSignup: UIButton!
+    var butForgotPassword: UIButton!
 
 	// 1Password
-	var butOnePassword = UIButton()
+    var butOnePassword: UIButton!
 	var appName = ""
 	var appUrl = ""
 
 	var isLogin = true
 
-	public var delegate: LFLoginControllerDelegate?
+	public weak var delegate: LFLoginControllerDelegate?
 	public enum SendType {
 
 		case Login
