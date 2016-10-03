@@ -9,7 +9,6 @@
 // swiftlint:disable trailing_whitespace
 
 import UIKit
-import LFLoginController
 
 class ViewController: UIViewController {
     
@@ -54,7 +53,7 @@ extension ViewController: LFLoginControllerDelegate {
             controller.wrongInfoShake()
         } else {
             
-            navigationController?.popViewControllerAnimated(true)
+            navigationController?.popViewController(animated: true)
         }
     }
     

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D3FD66B9190CB99BAD9D641 /* Pods_LFLoginControllerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F23D6169F8E3C48DCCB48E /* Pods_LFLoginControllerExampleUITests.framework */; };
-		65DE20C0234725D3333B978A /* Pods_LFLoginControllerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1D27A5D7FF3AC967A5E4E9 /* Pods_LFLoginControllerExample.framework */; };
 		C26E9AF21D45A14600829ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E9AF11D45A14600829ACC /* AppDelegate.swift */; };
 		C26E9AF41D45A14600829ACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E9AF31D45A14600829ACC /* ViewController.swift */; };
 		C26E9AF71D45A14600829ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26E9AF51D45A14600829ACC /* Main.storyboard */; };
@@ -17,7 +15,10 @@
 		C26E9B071D45A14600829ACC /* LFLoginControllerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E9B061D45A14600829ACC /* LFLoginControllerExampleTests.swift */; };
 		C26E9B121D45A14600829ACC /* LFLoginControllerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E9B111D45A14600829ACC /* LFLoginControllerExampleUITests.swift */; };
 		C26E9B201D45AC2200829ACC /* PolarBear.mov in Resources */ = {isa = PBXBuildFile; fileRef = C26E9B1F1D45AC2200829ACC /* PolarBear.mov */; };
-		F7BF8AE8D863D1E165547561 /* Pods_LFLoginControllerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FFF2E2869233EA8B8B6C75 /* Pods_LFLoginControllerExampleTests.framework */; };
+		C27D0A9D1DA22A800075471C /* LFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D0A9B1DA22A800075471C /* LFLoginController.swift */; };
+		C27D0AA11DA234BC0075471C /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D0A9E1DA234BC0075471C /* AutoCompleteTextField.swift */; };
+		C27D0AA21DA234BC0075471C /* AutoCompleteTextFieldConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D0A9F1DA234BC0075471C /* AutoCompleteTextFieldConstants.swift */; };
+		C27D0AA31DA234BC0075471C /* AutoCompleteTextFieldProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D0AA01DA234BC0075471C /* AutoCompleteTextFieldProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,38 +58,15 @@
 		C26E9B111D45A14600829ACC /* LFLoginControllerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFLoginControllerExampleUITests.swift; sourceTree = "<group>"; };
 		C26E9B131D45A14600829ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26E9B1F1D45AC2200829ACC /* PolarBear.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PolarBear.mov; sourceTree = "<group>"; };
+		C27D0A9B1DA22A800075471C /* LFLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFLoginController.swift; path = ../Sources/LFLoginController.swift; sourceTree = "<group>"; };
+		C27D0A9E1DA234BC0075471C /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		C27D0A9F1DA234BC0075471C /* AutoCompleteTextFieldConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextFieldConstants.swift; sourceTree = "<group>"; };
+		C27D0AA01DA234BC0075471C /* AutoCompleteTextFieldProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextFieldProtocols.swift; sourceTree = "<group>"; };
 		D8FFF2E2869233EA8B8B6C75 /* Pods_LFLoginControllerExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFLoginControllerExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4386446A35FA20265DCD29 /* Pods-LFLoginControllerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLoginControllerExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFLoginControllerExampleUITests/Pods-LFLoginControllerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E703586DA913B68EFB16C720 /* Pods-LFLoginControllerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLoginControllerExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFLoginControllerExampleUITests/Pods-LFLoginControllerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F5F23D6169F8E3C48DCCB48E /* Pods_LFLoginControllerExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFLoginControllerExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C26E9AEB1D45A14600829ACC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65DE20C0234725D3333B978A /* Pods_LFLoginControllerExample.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C26E9AFF1D45A14600829ACC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7BF8AE8D863D1E165547561 /* Pods_LFLoginControllerExampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C26E9B0A1D45A14600829ACC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5D3FD66B9190CB99BAD9D641 /* Pods_LFLoginControllerExampleUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		23CD10FC1BD3F2F725ABEDFE /* Frameworks */ = {
@@ -117,6 +95,10 @@
 		C26E9AE51D45A14600829ACC = {
 			isa = PBXGroup;
 			children = (
+				C27D0A9E1DA234BC0075471C /* AutoCompleteTextField.swift */,
+				C27D0A9F1DA234BC0075471C /* AutoCompleteTextFieldConstants.swift */,
+				C27D0AA01DA234BC0075471C /* AutoCompleteTextFieldProtocols.swift */,
+				C27D0A9B1DA22A800075471C /* LFLoginController.swift */,
 				C26E9AF01D45A14600829ACC /* LFLoginControllerExample */,
 				C26E9B051D45A14600829ACC /* LFLoginControllerExampleTests */,
 				C26E9B101D45A14600829ACC /* LFLoginControllerExampleUITests */,
@@ -175,12 +157,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C26E9B161D45A14600829ACC /* Build configuration list for PBXNativeTarget "LFLoginControllerExample" */;
 			buildPhases = (
-				C030B3BF79C3D1E4817BF69F /* [CP] Check Pods Manifest.lock */,
 				C26E9AEA1D45A14600829ACC /* Sources */,
-				C26E9AEB1D45A14600829ACC /* Frameworks */,
 				C26E9AEC1D45A14600829ACC /* Resources */,
-				0002CB95A0533639F87517D1 /* [CP] Embed Pods Frameworks */,
-				F368006E80B25C53674DB27D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,12 +173,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C26E9B191D45A14600829ACC /* Build configuration list for PBXNativeTarget "LFLoginControllerExampleTests" */;
 			buildPhases = (
-				E7D1C3CCBFF60D5109421A6A /* [CP] Check Pods Manifest.lock */,
 				C26E9AFE1D45A14600829ACC /* Sources */,
-				C26E9AFF1D45A14600829ACC /* Frameworks */,
 				C26E9B001D45A14600829ACC /* Resources */,
-				7BB68414A6D8175036CAFC7F /* [CP] Embed Pods Frameworks */,
-				1D673254BAA3D7E42F9A937F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,11 +190,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C26E9B1C1D45A14600829ACC /* Build configuration list for PBXNativeTarget "LFLoginControllerExampleUITests" */;
 			buildPhases = (
-				A744E08E9414CCA7D8F0FF25 /* [CP] Check Pods Manifest.lock */,
 				C26E9B091D45A14600829ACC /* Sources */,
-				C26E9B0A1D45A14600829ACC /* Frameworks */,
 				C26E9B0B1D45A14600829ACC /* Resources */,
-				8827682BF89F943BC42E65D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +215,7 @@
 				TargetAttributes = {
 					C26E9AED1D45A14600829ACC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = NN3TD9EB8G;
 					};
 					C26E9B011D45A14600829ACC = {
 						CreatedOnToolsVersion = 7.3;
@@ -303,135 +275,16 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0002CB95A0533639F87517D1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFLoginControllerExample/Pods-LFLoginControllerExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D673254BAA3D7E42F9A937F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFLoginControllerExampleTests/Pods-LFLoginControllerExampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BB68414A6D8175036CAFC7F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFLoginControllerExampleTests/Pods-LFLoginControllerExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8827682BF89F943BC42E65D0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFLoginControllerExampleUITests/Pods-LFLoginControllerExampleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A744E08E9414CCA7D8F0FF25 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C030B3BF79C3D1E4817BF69F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E7D1C3CCBFF60D5109421A6A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F368006E80B25C53674DB27D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFLoginControllerExample/Pods-LFLoginControllerExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C26E9AEA1D45A14600829ACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27D0A9D1DA22A800075471C /* LFLoginController.swift in Sources */,
+				C27D0AA31DA234BC0075471C /* AutoCompleteTextFieldProtocols.swift in Sources */,
+				C27D0AA11DA234BC0075471C /* AutoCompleteTextField.swift in Sources */,
 				C26E9AF41D45A14600829ACC /* ViewController.swift in Sources */,
+				C27D0AA21DA234BC0075471C /* AutoCompleteTextFieldConstants.swift in Sources */,
 				C26E9AF21D45A14600829ACC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,10 +428,12 @@
 			baseConfigurationReference = 1CFE596D2DE96C3D1E21D985 /* Pods-LFLoginControllerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
 				INFOPLIST_FILE = LFLoginControllerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -587,10 +442,12 @@
 			baseConfigurationReference = 6B461B1D94AE4373DF709EE0 /* Pods-LFLoginControllerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
 				INFOPLIST_FILE = LFLoginControllerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -603,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFLoginControllerExample.app/LFLoginControllerExample";
 			};
 			name = Debug;
@@ -616,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFLoginControllerExample.app/LFLoginControllerExample";
 			};
 			name = Release;
@@ -628,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LFLoginControllerExample;
 			};
 			name = Debug;
@@ -640,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.LFLoginControllerExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LFLoginControllerExample;
 			};
 			name = Release;
