@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C23A353C1DDF033B00D5138A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A353B1DDF033B00D5138A /* AppDelegate.swift */; };
+		C23A35431DDF033B00D5138A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23A35421DDF033B00D5138A /* Assets.xcassets */; };
+		C23A35461DDF033C00D5138A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A35441DDF033C00D5138A /* LaunchScreen.storyboard */; };
+		C23A35511DDF033C00D5138A /* LFLoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A35501DDF033C00D5138A /* LFLoginControllerTests.swift */; };
+		C23A355C1DDF033C00D5138A /* LFLoginControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A355B1DDF033C00D5138A /* LFLoginControllerUITests.swift */; };
+		C23A35711DDF03BE00D5138A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A356F1DDF03BE00D5138A /* ViewController.swift */; };
+		C23A35721DDF03BE00D5138A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A35701DDF03BE00D5138A /* Main.storyboard */; };
+		C23A35781DDF03D200D5138A /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A35731DDF03D200D5138A /* AutoCompleteTextField.swift */; };
+		C23A35791DDF03D200D5138A /* AutoCompleteTextFieldConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A35741DDF03D200D5138A /* AutoCompleteTextFieldConstants.swift */; };
+		C23A357A1DDF03D200D5138A /* AutoCompleteTextFieldProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A35751DDF03D200D5138A /* AutoCompleteTextFieldProtocols.swift */; };
+		C23A357B1DDF03D200D5138A /* LFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A35761DDF03D200D5138A /* LFLoginController.swift */; };
+		C23A357C1DDF03D200D5138A /* PolarBear.mov in Resources */ = {isa = PBXBuildFile; fileRef = C23A35771DDF03D200D5138A /* PolarBear.mov */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C23A354D1DDF033C00D5138A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23A35301DDF033B00D5138A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C23A35371DDF033B00D5138A;
+			remoteInfo = LFLoginController;
+		};
+		C23A35581DDF033C00D5138A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23A35301DDF033B00D5138A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C23A35371DDF033B00D5138A;
+			remoteInfo = LFLoginController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C23A35381DDF033B00D5138A /* LFLoginController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFLoginController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23A353B1DDF033B00D5138A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C23A35421DDF033B00D5138A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C23A35451DDF033C00D5138A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C23A35471DDF033C00D5138A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23A354C1DDF033C00D5138A /* LFLoginControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFLoginControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23A35501DDF033C00D5138A /* LFLoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFLoginControllerTests.swift; sourceTree = "<group>"; };
+		C23A35521DDF033C00D5138A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23A35571DDF033C00D5138A /* LFLoginControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFLoginControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23A355B1DDF033C00D5138A /* LFLoginControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFLoginControllerUITests.swift; sourceTree = "<group>"; };
+		C23A355D1DDF033C00D5138A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23A356F1DDF03BE00D5138A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C23A35701DDF03BE00D5138A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C23A35731DDF03D200D5138A /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		C23A35741DDF03D200D5138A /* AutoCompleteTextFieldConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextFieldConstants.swift; sourceTree = "<group>"; };
+		C23A35751DDF03D200D5138A /* AutoCompleteTextFieldProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextFieldProtocols.swift; sourceTree = "<group>"; };
+		C23A35761DDF03D200D5138A /* LFLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFLoginController.swift; sourceTree = "<group>"; };
+		C23A35771DDF03D200D5138A /* PolarBear.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PolarBear.mov; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C23A35351DDF033B00D5138A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A35491DDF033C00D5138A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A35541DDF033C00D5138A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C23A352F1DDF033B00D5138A = {
+			isa = PBXGroup;
+			children = (
+				C23A353A1DDF033B00D5138A /* LFLoginController */,
+				C23A354F1DDF033C00D5138A /* LFLoginControllerTests */,
+				C23A355A1DDF033C00D5138A /* LFLoginControllerUITests */,
+				C23A35391DDF033B00D5138A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C23A35391DDF033B00D5138A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C23A35381DDF033B00D5138A /* LFLoginController.app */,
+				C23A354C1DDF033C00D5138A /* LFLoginControllerTests.xctest */,
+				C23A35571DDF033C00D5138A /* LFLoginControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C23A353A1DDF033B00D5138A /* LFLoginController */ = {
+			isa = PBXGroup;
+			children = (
+				C23A35731DDF03D200D5138A /* AutoCompleteTextField.swift */,
+				C23A35741DDF03D200D5138A /* AutoCompleteTextFieldConstants.swift */,
+				C23A35751DDF03D200D5138A /* AutoCompleteTextFieldProtocols.swift */,
+				C23A35761DDF03D200D5138A /* LFLoginController.swift */,
+				C23A35771DDF03D200D5138A /* PolarBear.mov */,
+				C23A353B1DDF033B00D5138A /* AppDelegate.swift */,
+				C23A356F1DDF03BE00D5138A /* ViewController.swift */,
+				C23A35701DDF03BE00D5138A /* Main.storyboard */,
+				C23A35421DDF033B00D5138A /* Assets.xcassets */,
+				C23A35441DDF033C00D5138A /* LaunchScreen.storyboard */,
+				C23A35471DDF033C00D5138A /* Info.plist */,
+			);
+			path = LFLoginController;
+			sourceTree = "<group>";
+		};
+		C23A354F1DDF033C00D5138A /* LFLoginControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C23A35501DDF033C00D5138A /* LFLoginControllerTests.swift */,
+				C23A35521DDF033C00D5138A /* Info.plist */,
+			);
+			path = LFLoginControllerTests;
+			sourceTree = "<group>";
+		};
+		C23A355A1DDF033C00D5138A /* LFLoginControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C23A355B1DDF033C00D5138A /* LFLoginControllerUITests.swift */,
+				C23A355D1DDF033C00D5138A /* Info.plist */,
+			);
+			path = LFLoginControllerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C23A35371DDF033B00D5138A /* LFLoginController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23A35601DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginController" */;
+			buildPhases = (
+				C23A35341DDF033B00D5138A /* Sources */,
+				C23A35351DDF033B00D5138A /* Frameworks */,
+				C23A35361DDF033B00D5138A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFLoginController;
+			productName = LFLoginController;
+			productReference = C23A35381DDF033B00D5138A /* LFLoginController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C23A354B1DDF033C00D5138A /* LFLoginControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23A35631DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginControllerTests" */;
+			buildPhases = (
+				C23A35481DDF033C00D5138A /* Sources */,
+				C23A35491DDF033C00D5138A /* Frameworks */,
+				C23A354A1DDF033C00D5138A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23A354E1DDF033C00D5138A /* PBXTargetDependency */,
+			);
+			name = LFLoginControllerTests;
+			productName = LFLoginControllerTests;
+			productReference = C23A354C1DDF033C00D5138A /* LFLoginControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C23A35561DDF033C00D5138A /* LFLoginControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23A35661DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginControllerUITests" */;
+			buildPhases = (
+				C23A35531DDF033C00D5138A /* Sources */,
+				C23A35541DDF033C00D5138A /* Frameworks */,
+				C23A35551DDF033C00D5138A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23A35591DDF033C00D5138A /* PBXTargetDependency */,
+			);
+			name = LFLoginControllerUITests;
+			productName = LFLoginControllerUITests;
+			productReference = C23A35571DDF033C00D5138A /* LFLoginControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C23A35301DDF033B00D5138A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Lucas Farah";
+				TargetAttributes = {
+					C23A35371DDF033B00D5138A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NN3TD9EB8G;
+						ProvisioningStyle = Automatic;
+					};
+					C23A354B1DDF033C00D5138A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NN3TD9EB8G;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C23A35371DDF033B00D5138A;
+					};
+					C23A35561DDF033C00D5138A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NN3TD9EB8G;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C23A35371DDF033B00D5138A;
+					};
+				};
+			};
+			buildConfigurationList = C23A35331DDF033B00D5138A /* Build configuration list for PBXProject "LFLoginController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C23A352F1DDF033B00D5138A;
+			productRefGroup = C23A35391DDF033B00D5138A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C23A35371DDF033B00D5138A /* LFLoginController */,
+				C23A354B1DDF033C00D5138A /* LFLoginControllerTests */,
+				C23A35561DDF033C00D5138A /* LFLoginControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C23A35361DDF033B00D5138A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23A35721DDF03BE00D5138A /* Main.storyboard in Resources */,
+				C23A357C1DDF03D200D5138A /* PolarBear.mov in Resources */,
+				C23A35461DDF033C00D5138A /* LaunchScreen.storyboard in Resources */,
+				C23A35431DDF033B00D5138A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A354A1DDF033C00D5138A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A35551DDF033C00D5138A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C23A35341DDF033B00D5138A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23A35781DDF03D200D5138A /* AutoCompleteTextField.swift in Sources */,
+				C23A35711DDF03BE00D5138A /* ViewController.swift in Sources */,
+				C23A353C1DDF033B00D5138A /* AppDelegate.swift in Sources */,
+				C23A357B1DDF03D200D5138A /* LFLoginController.swift in Sources */,
+				C23A357A1DDF03D200D5138A /* AutoCompleteTextFieldProtocols.swift in Sources */,
+				C23A35791DDF03D200D5138A /* AutoCompleteTextFieldConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A35481DDF033C00D5138A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23A35511DDF033C00D5138A /* LFLoginControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23A35531DDF033C00D5138A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23A355C1DDF033C00D5138A /* LFLoginControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C23A354E1DDF033C00D5138A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C23A35371DDF033B00D5138A /* LFLoginController */;
+			targetProxy = C23A354D1DDF033C00D5138A /* PBXContainerItemProxy */;
+		};
+		C23A35591DDF033C00D5138A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C23A35371DDF033B00D5138A /* LFLoginController */;
+			targetProxy = C23A35581DDF033C00D5138A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C23A35441DDF033C00D5138A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C23A35451DDF033C00D5138A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C23A355E1DDF033C00D5138A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C23A355F1DDF033C00D5138A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C23A35611DDF033C00D5138A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C23A35621DDF033C00D5138A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C23A35641DDF033C00D5138A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFLoginController.app/LFLoginController";
+			};
+			name = Debug;
+		};
+		C23A35651DDF033C00D5138A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFLoginController.app/LFLoginController";
+			};
+			name = Release;
+		};
+		C23A35671DDF033C00D5138A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LFLoginController;
+			};
+			name = Debug;
+		};
+		C23A35681DDF033C00D5138A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NN3TD9EB8G;
+				INFOPLIST_FILE = LFLoginControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lucasfarah.LFLoginControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LFLoginController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C23A35331DDF033B00D5138A /* Build configuration list for PBXProject "LFLoginController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23A355E1DDF033C00D5138A /* Debug */,
+				C23A355F1DDF033C00D5138A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C23A35601DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23A35611DDF033C00D5138A /* Debug */,
+				C23A35621DDF033C00D5138A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C23A35631DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23A35641DDF033C00D5138A /* Debug */,
+				C23A35651DDF033C00D5138A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C23A35661DDF033C00D5138A /* Build configuration list for PBXNativeTarget "LFLoginControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23A35671DDF033C00D5138A /* Debug */,
+				C23A35681DDF033C00D5138A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C23A35301DDF033B00D5138A /* Project object */;
+}

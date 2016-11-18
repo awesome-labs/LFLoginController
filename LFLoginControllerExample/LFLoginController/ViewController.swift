@@ -53,7 +53,7 @@ extension ViewController: LFLoginControllerDelegate {
             controller.wrongInfoShake()
         } else {
             
-            navigationController?.popViewController(animated: true)
+            _ = navigationController?.popViewController(animated: true)
         }
     }
     

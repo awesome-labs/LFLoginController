@@ -1,15 +1,15 @@
 //
-//  LFLoginControllerExampleTests.swift
-//  LFLoginControllerExampleTests
+//  LFLoginControllerTests.swift
+//  LFLoginControllerTests
 //
-//  Created by Lucas Farah on 7/24/16.
+//  Created by Lucas Farah on 11/18/16.
 //  Copyright © 2016 Lucas Farah. All rights reserved.
 //
 
 import XCTest
-@testable import LFLoginControllerExample
+@testable import LFLoginController
 
-class LFLoginControllerExampleTests: XCTestCase {
+class LFLoginControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -28,7 +28,7 @@ class LFLoginControllerExampleTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LFLoginController"
-  s.version      = "0.2.7.2"
+  s.version      = "0.2.7.3"
   s.summary      = "Creating Login screens is boring and repetitive. What about implementing and customizing them in less then 10 lines of code?"
   s.homepage     = "https://github.com/awesome-labs/LFLoginController/"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/awesome-labs/LFLoginController.git", :tag => s.version }
-  s.source_files  = "Sources/"
+  s.source_files  = "Sources/*.swift"
   s.resources = ['Resources/*.png']
   s.requires_arc = true
 end

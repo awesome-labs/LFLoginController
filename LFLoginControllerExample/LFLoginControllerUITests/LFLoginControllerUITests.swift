@@ -1,14 +1,14 @@
 //
-//  LFLoginControllerExampleUITests.swift
-//  LFLoginControllerExampleUITests
+//  LFLoginControllerUITests.swift
+//  LFLoginControllerUITests
 //
-//  Created by Lucas Farah on 7/24/16.
+//  Created by Lucas Farah on 11/18/16.
 //  Copyright © 2016 Lucas Farah. All rights reserved.
 //
 
 import XCTest
 
-class LFLoginControllerExampleUITests: XCTestCase {
+class LFLoginControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -31,20 +31,6 @@ class LFLoginControllerExampleUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let app = XCUIApplication()
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
-        
-        let enterYourEmailTextField = app.textFields["Enter your Email"]
-        enterYourEmailTextField.tap()
-        enterYourEmailTextField.typeText("lucas.farah@me.com")
-        app.typeText("\n")
-        
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("1234\n")
-        
-        loginButton.tap()
     }
+    
 }
