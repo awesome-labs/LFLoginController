@@ -19,7 +19,7 @@ public protocol LFLoginControllerDelegate: class {
 	/// LFLoginControllerDelegate: Called after pressing 'Login' or 'Signup
 	func loginDidFinish(email: String, password: String, type: LFLoginController.SendType)
 
-	func forgotPasswordTapped()
+    func forgotPasswordTapped(email: String)
 }
 
 public class LFLoginController: UIViewController {
@@ -481,7 +481,7 @@ public class LFLoginController: UIViewController {
 
 	func forgotPasswordTapped() {
 
-		delegate?.forgotPasswordTapped()
+		delegate?.forgotPasswordTapped(email: self.txtEmail.text!)
 	}
 
 //	func onePasswordTapped() {

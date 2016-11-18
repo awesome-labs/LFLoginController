@@ -57,8 +57,7 @@ extension ViewController: LFLoginControllerDelegate {
         }
     }
     
-    func forgotPasswordTapped() {
-        
-        print("forgot password")
+    func forgotPasswordTapped(email: String) {
+        print("forgot password: \(email)")
     }
 }
