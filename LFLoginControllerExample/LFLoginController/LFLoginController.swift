@@ -543,7 +543,7 @@ public class LFLoginController: UIViewController {
 		let login = isLogin ? "Login" : "Signup"
 		self.butLogin.setTitle(login, for: .normal)
 
-		let signup = isLogin ? "Don't an account? Sign up" : "Have an account? Login"
+		let signup = isLogin ? "Don't have an account? Sign up" : "Have an account? Login"
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
 		let titleString = NSAttributedString(string: signup, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
