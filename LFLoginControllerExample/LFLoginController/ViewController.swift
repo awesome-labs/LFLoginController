@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         // Customizations
         controller.logo = UIImage(named: "AwesomeLabsLogoWhite")
+//      controller.backgroundColor = UIColor(red: 224 / 255, green: 68 / 255, blue: 98 / 255, alpha: 1)
 //		controller.videoURL = NSBundle.mainBundle().URLForResource("PolarBear", withExtension: "mov")!
 //		controller.loginButtonColor = UIColor.purpleColor()
 //		controller.setupOnePassword("YourAppName", appUrl: "YourAppURL")

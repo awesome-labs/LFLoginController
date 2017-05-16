@@ -233,6 +233,12 @@ public class LFLoginController: UIViewController {
 			setupLoginButton()
 		}
 	}
+    
+    public var backgroundColor: UIColor? {
+        didSet {
+            setupBackgroundColor()
+        }
+    }
 
 	// MARK: - Methods
 
@@ -327,6 +333,11 @@ public class LFLoginController: UIViewController {
 			p.seek(to: kCMTimeZero)
 		}
 	}
+    
+    // MARK: Background Color
+    func setupBackgroundColor() {
+        self.view.backgroundColor = self.backgroundColor
+    }
 
 	// MARK: Login Logo
 	func setupLoginLogo() {
