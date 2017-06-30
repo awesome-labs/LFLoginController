@@ -239,6 +239,12 @@ public class LFLoginController: UIViewController {
             setupBackgroundColor()
         }
     }
+    
+    public var isSignupSupported = true {
+        didSet {
+            setupSignupButton()
+        }
+    }
 
 	// MARK: - Methods
 
@@ -278,7 +284,7 @@ public class LFLoginController: UIViewController {
 		setupEmailField()
 		setupPasswordField()
 		setupLoginButton()
-		setupSignupButton()
+        setupSignupButton()
 		setupForgotPasswordButton()
 
 		view.addSubview(loginView)
@@ -440,15 +446,20 @@ public class LFLoginController: UIViewController {
 
 	func setupSignupButton() {
 
-		butSignup = UIButton(frame: CGRect(x: 0, y: loginView.frame.maxY - 200, width: loginView.frame.width, height: 40))
+        if butSignup != nil {
+            butSignup.removeFromSuperview()
+        }
+        if isSignupSupported {
+            butSignup = UIButton(frame: CGRect(x: 0, y: loginView.frame.maxY - 200, width: loginView.frame.width, height: 40))
 
-		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
-		butSignup.setAttributedTitle(titleString, for: .normal)
-		butSignup.alpha = 0.7
+            let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
+            let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+            butSignup.setAttributedTitle(titleString, for: .normal)
+            butSignup.alpha = 0.7
 
-		butSignup.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
-		loginView.addSubview(butSignup)
+            butSignup.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
+            loginView.addSubview(butSignup)
+        }
 	}
 
 	func setupForgotPasswordButton() {
