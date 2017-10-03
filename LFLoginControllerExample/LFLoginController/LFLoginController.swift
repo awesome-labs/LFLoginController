@@ -311,7 +311,7 @@ public class LFLoginController: UIViewController {
 			var avPlayer = AVPlayer()
 			avPlayer = AVPlayer(url: theURL as URL)
 			let avPlayerLayer = AVPlayerLayer(player: avPlayer)
-			avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+			avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
 			avPlayer.volume = 0
 			avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.none
 
@@ -333,7 +333,7 @@ public class LFLoginController: UIViewController {
 		}
 	}
 
-	func playerItemDidReachEnd(notification: NSNotification) {
+	@objc func playerItemDidReachEnd(notification: NSNotification) {
 
 		if let p = notification.object as? AVPlayerItem {
 			p.seek(to: kCMTimeZero)
@@ -392,7 +392,7 @@ public class LFLoginController: UIViewController {
 		txtEmail.autocorrectionType = .no
 		txtEmail.textColor = UIColor.white
 		txtEmail.keyboardType = .emailAddress
-		txtEmail.attributedPlaceholder = NSAttributedString(string: "Enter your Email", attributes: [NSForegroundColorAttributeName: UIColor.white.withAlphaComponent(0.5)])
+		txtEmail.attributedPlaceholder = NSAttributedString(string: "Enter your Email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
 		loginView.addSubview(txtEmail)
 
 		bottomTxtEmailView = UIView(frame: CGRect(x: txtEmail.frame.minX - imgvUserIcon.frame.width - 5, y: txtEmail.frame.maxY + 5, width: loginView.frame.width, height: 1))
@@ -414,7 +414,7 @@ public class LFLoginController: UIViewController {
 		txtPassword.returnKeyType = .done
 		txtPassword.isSecureTextEntry = true
 		txtPassword.textColor = UIColor.white
-		txtPassword.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white.withAlphaComponent(0.5)])
+		txtPassword.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
 		loginView.addSubview(txtPassword)
 
 		bottomTxtPasswordView = UIView(frame: CGRect(x: txtPassword.frame.minX - imgvPasswordIcon.frame.width - 5, y: txtPassword.frame.maxY + 5, width: loginView.frame.width, height: 1))
@@ -453,7 +453,7 @@ public class LFLoginController: UIViewController {
             butSignup = UIButton(frame: CGRect(x: 0, y: loginView.frame.maxY - 200, width: loginView.frame.width, height: 40))
 
             let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-            let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+            let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
             butSignup.setAttributedTitle(titleString, for: .normal)
             butSignup.alpha = 0.7
 
@@ -467,7 +467,7 @@ public class LFLoginController: UIViewController {
 		butForgotPassword = UIButton(frame: CGRect(x: 0, y: butLogin.frame.maxY, width: loginView.frame.width, height: 40))
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: "Forgot password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+		let titleString = NSAttributedString(string: "Forgot password", attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
 		butForgotPassword.setAttributedTitle(titleString, for: .normal)
 		butForgotPassword.alpha = 0.7
 
@@ -489,19 +489,19 @@ public class LFLoginController: UIViewController {
 	}
 
 	// MARK: Button Handlers
-	func sendTapped() {
+	@objc func sendTapped() {
 
 		let type = isLogin ? SendType.Login : SendType.Signup
 
 		delegate?.loginDidFinish(email: self.txtEmail.text!, password: self.txtPassword.text!, type: type)
 	}
 
-	func signupTapped() {
+	@objc func signupTapped() {
 
 		toggleLoginSignup()
 	}
 
-	func forgotPasswordTapped() {
+	@objc func forgotPasswordTapped() {
 
 		delegate?.forgotPasswordTapped(email: self.txtEmail.text!)
 	}
@@ -568,7 +568,7 @@ public class LFLoginController: UIViewController {
 		let signup = isLogin ? "Don't have an account? Sign up" : "Have an account? Login"
 
 		let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-		let titleString = NSAttributedString(string: signup, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+		let titleString = NSAttributedString(string: signup, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
 		self.butSignup.setAttributedTitle(titleString, for: .normal)
 
 	}

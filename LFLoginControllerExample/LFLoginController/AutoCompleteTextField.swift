@@ -234,7 +234,7 @@ open class AutoCompleteTextField: UITextField {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byCharWrapping
         
-        let textAttributes: [String: AnyObject] = [NSFontAttributeName: font!, NSParagraphStyleAttributeName: paragraphStyle]
+        let textAttributes: [NSAttributedStringKey : Any] = [.font: font!, .paragraphStyle: paragraphStyle]
         
         let drawingOptions: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
         
@@ -300,14 +300,14 @@ open class AutoCompleteTextField: UITextField {
     
     // MARK: - Internal Controls
     
-    internal func autoCompleteButtonDidTapped(_ sender: UIButton) {
+    @objc internal func autoCompleteButtonDidTapped(_ sender: UIButton) {
         endEditing(true)
         
         processAutoCompleteEvent()
         commitAutocompleteText()
     }
     
-    internal func autoCompleteTextFieldDidChanged(_ textField: UITextField) {
+    @objc internal func autoCompleteTextFieldDidChanged(_ textField: UITextField) {
         
         processAutoCompleteEvent()
     }
