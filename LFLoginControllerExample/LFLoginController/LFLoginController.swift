@@ -215,7 +215,7 @@ public class LFLoginController: UIViewController {
 	// MARK: Customizations
 
 	/// URL of the background video
-	public var videoURL: NSURL? {
+	public var videoURL: URL? {
 		didSet {
 			setupVideoBackgrond()
 		}
@@ -298,7 +298,6 @@ public class LFLoginController: UIViewController {
 	// MARK: Background Video Player
 	func setupVideoBackgrond() {
 
-		var theURL = NSURL()
 		if let url = videoURL {
 
 			let shade = UIView(frame: self.view.frame)
@@ -306,10 +305,8 @@ public class LFLoginController: UIViewController {
 			view.addSubview(shade)
 			view.sendSubview(toBack: shade)
 
-			theURL = url
-
 			var avPlayer = AVPlayer()
-			avPlayer = AVPlayer(url: theURL as URL)
+			avPlayer = AVPlayer(url: url)
 			let avPlayerLayer = AVPlayerLayer(player: avPlayer)
 			avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
 			avPlayer.volume = 0
@@ -324,10 +321,6 @@ public class LFLoginController: UIViewController {
 			view.sendSubview(toBack: layer)
 
             NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
-//			NotificationCenter.default().addObserver(self,
-//				selector: #selector(playerItemDidReachEnd(_:)),
-//				name: AVPlayerItemDidPlayToEndTimeNotification,
-//				object: avPlayer.currentItem)
 
 			avPlayer.play()
 		}
@@ -348,7 +341,7 @@ public class LFLoginController: UIViewController {
 	// MARK: Login Logo
 	func setupLoginLogo() {
 
-		let logoFrame = CGRect(x: (self.view.bounds.width - 100) / 2, y: 30, width: 100, height: 100)
+		let logoFrame = CGRect(x: (self.view.bounds.width - 100) / 2, y: 50, width: 100, height: 100)
 		imgvLogo = UIImageView(frame: logoFrame)
 
 		if let loginLogo = logo {
@@ -363,10 +356,9 @@ public class LFLoginController: UIViewController {
 	func setupLoginView() {
 
 		let loginX: CGFloat = 20
-		let loginY = CGFloat(130 + 40)
+        let loginY: CGFloat = 130 + 40
 		let loginWidth = self.view.bounds.width - 40
 		let loginHeight: CGFloat = self.view.bounds.height - loginY - 30
-		print(loginHeight)
 
 		loginView = UIView(frame: CGRect(x: loginX, y: loginY, width: loginWidth, height: loginHeight))
 	}
