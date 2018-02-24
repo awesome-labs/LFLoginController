@@ -10,7 +10,7 @@ import XCTest
 
 class LFLoginControllerUITests: XCTestCase {
     
-    var app: XCUIElement?
+    var app: XCUIElement!
     
     override func setUp() {
         super.setUp()
@@ -23,13 +23,6 @@ class LFLoginControllerUITests: XCTestCase {
         XCUIApplication().launch()
 
         app = XCUIApplication()
-        
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func completeInformation() {
@@ -38,18 +31,16 @@ class LFLoginControllerUITests: XCTestCase {
         email.tap()
         UIPasteboard.general.string = "lucas.farah@me.com"
         email.press(forDuration: 1.1)
-        app?.menuItems["Paste"].tap()
+        app.menuItems["Paste"].tap()
         
-        let password = app?.secureTextFields["Password"]
-        password?.tap()
+        let password = app.secureTextFields["Password"]
+        password.tap()
         UIPasteboard.general.string = "1234"
-        password?.press(forDuration: 1.1)
-        app?.menuItems["Paste"].tap()
+        password.press(forDuration: 1.1)
+        app.menuItems["Paste"].tap()
     }
     
     func testLogin() {
-        
-        let app = XCUIApplication()
         app.buttons["Login"].tap()
         completeInformation()
         app.buttons["Login"].tap()
@@ -57,7 +48,6 @@ class LFLoginControllerUITests: XCTestCase {
     
     func testSignup() {
         
-        let app = XCUIApplication()
         app.buttons["Login"].tap()
         completeInformation()
         print(app.buttons)
