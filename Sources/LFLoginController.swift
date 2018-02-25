@@ -215,7 +215,7 @@ public class LFLoginController: UIViewController {
     // MARK: Customizations
     
     /// URL of the background video
-    public var videoURL: NSURL? {
+    public var videoURL: URL? {
         didSet {
             setupVideoBackgrond()
         }
@@ -299,20 +299,17 @@ public class LFLoginController: UIViewController {
     // MARK: Background Video Player
     func setupVideoBackgrond() {
         
-        var theURL = NSURL()
         if let url = videoURL {
             
             let shade = UIView(frame: self.view.frame)
             shade.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
             view.addSubview(shade)
             view.sendSubview(toBack: shade)
-            
-            theURL = url
-            
+
             var avPlayer = AVPlayer()
-            avPlayer = AVPlayer(url: theURL as URL)
+            avPlayer = AVPlayer(url: url)
             let avPlayerLayer = AVPlayerLayer(player: avPlayer)
-            avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+            avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
             avPlayer.volume = 0
             avPlayer.actionAtItemEnd = AVPlayerActionAtItemEnd.none
             
@@ -325,19 +322,15 @@ public class LFLoginController: UIViewController {
             view.sendSubview(toBack: layer)
             
             NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
-            //			NotificationCenter.default().addObserver(self,
-            //				selector: #selector(playerItemDidReachEnd(_:)),
-            //				name: AVPlayerItemDidPlayToEndTimeNotification,
-            //				object: avPlayer.currentItem)
             
             avPlayer.play()
         }
     }
     
-    func playerItemDidReachEnd(notification: NSNotification) {
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
         
         if let p = notification.object as? AVPlayerItem {
-            p.seek(to: kCMTimeZero)
+            p.seek(to: kCMTimeZero, completionHandler: nil)
         }
     }
     
@@ -393,7 +386,7 @@ public class LFLoginController: UIViewController {
         txtEmail.autocorrectionType = .no
         txtEmail.textColor = UIColor.white
         txtEmail.keyboardType = .emailAddress
-        txtEmail.attributedPlaceholder = NSAttributedString(string: "Enter your Email", attributes: [NSForegroundColorAttributeName: UIColor.white.withAlphaComponent(0.5)])
+        txtEmail.attributedPlaceholder = NSAttributedString(string: "Enter your Email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
         loginView.addSubview(txtEmail)
         
         bottomTxtEmailView = UIView(frame: CGRect(x: txtEmail.frame.minX - imgvUserIcon.frame.width - 5, y: txtEmail.frame.maxY + 5, width: loginView.frame.width, height: 1))
@@ -415,7 +408,7 @@ public class LFLoginController: UIViewController {
         txtPassword.returnKeyType = .done
         txtPassword.isSecureTextEntry = true
         txtPassword.textColor = UIColor.white
-        txtPassword.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white.withAlphaComponent(0.5)])
+        txtPassword.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
         loginView.addSubview(txtPassword)
         
         bottomTxtPasswordView = UIView(frame: CGRect(x: txtPassword.frame.minX - imgvPasswordIcon.frame.width - 5, y: txtPassword.frame.maxY + 5, width: loginView.frame.width, height: 1))
@@ -454,7 +447,7 @@ public class LFLoginController: UIViewController {
             butSignup = UIButton(frame: CGRect(x: 0, y: loginView.frame.maxY - 200, width: loginView.frame.width, height: 40))
             
             let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-            let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+            let titleString = NSAttributedString(string: "Don't have an account? Sign up", attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
             butSignup.setAttributedTitle(titleString, for: .normal)
             butSignup.alpha = 0.7
             
@@ -468,7 +461,7 @@ public class LFLoginController: UIViewController {
         butForgotPassword = UIButton(frame: CGRect(x: 0, y: butLogin.frame.maxY, width: loginView.frame.width, height: 40))
         
         let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-        let titleString = NSAttributedString(string: "Forgot password", attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+        let titleString = NSAttributedString(string: "Forgot password", attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
         butForgotPassword.setAttributedTitle(titleString, for: .normal)
         butForgotPassword.alpha = 0.7
         
@@ -490,19 +483,19 @@ public class LFLoginController: UIViewController {
     }
     
     // MARK: Button Handlers
-    func sendTapped() {
+    @objc func sendTapped() {
         
         let type = isLogin ? SendType.Login : SendType.Signup
         
         delegate?.loginDidFinish(email: self.txtEmail.text!, password: self.txtPassword.text!, type: type)
     }
     
-    func signupTapped() {
+    @objc func signupTapped() {
         
         toggleLoginSignup()
     }
     
-    func forgotPasswordTapped() {
+    @objc func forgotPasswordTapped() {
         
         delegate?.forgotPasswordTapped(email: self.txtEmail.text!)
     }
@@ -569,7 +562,7 @@ public class LFLoginController: UIViewController {
         let signup = isLogin ? "Don't have an account? Sign up" : "Have an account? Login"
         
         let font = UIFont(name: "HelveticaNeue-Medium", size: 12)!
-        let titleString = NSAttributedString(string: signup, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+        let titleString = NSAttributedString(string: signup, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white])
         self.butSignup.setAttributedTitle(titleString, for: .normal)
         
     }

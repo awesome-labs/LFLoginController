@@ -2,12 +2,11 @@
 //  LFLoginControllerTests.swift
 //  LFLoginControllerTests
 //
-//  Created by Lucas Farah on 11/18/16.
-//  Copyright © 2016 Lucas Farah. All rights reserved.
+//  Created by Rachel Brindle on 2/23/18.
+//  Copyright © 2018 Lucas Farah. All rights reserved.
 //
 
 import XCTest
-@testable import LFLoginController
 
 class LFLoginControllerTests: XCTestCase {
     
