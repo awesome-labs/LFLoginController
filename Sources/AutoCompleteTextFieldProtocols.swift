@@ -21,26 +21,36 @@ public protocol AutoCompleteTextFieldDataSource: NSObjectProtocol {
     
     // Optional protocols
     
+    /* Andy Zimmelman 2019
+     * Updates to Swift programming language (https://swift.org/) disallows dynamic protocol definitions as of recent.
+     * 
+     * Errors occur in previous versions of this repository due to this update to the Swift programming language
+     * and this fix relieves any errors. Due to this updated Swift language change, ONLY MEMBERS OF CLASSES MAY BE DYNAMIC.
+     * Originally, the error is thrown when attempting to compile due to the fact that this protocol was previously 
+     * dynamic. With this update, the protocol is no longer dynamic, allowing compilation. 
+     * This repository can now be used, as is, and will compile without error to be used within others projects.
+     */
+
     // return NO to disallow editing. Defaults to YES.
-    @objc optional func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    @objc optional func textFieldShouldBeginEditing(textField: UITextField) -> Bool
     
     // became first responder
-    @objc optional func textFieldDidBeginEditing(_ textField: UITextField)
+    @objc optional func textFieldDidBeginEditing(textField: UITextField)
     
     // return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end. Defaults to YES.
-    @objc optional func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
+    @objc optional func textFieldShouldEndEditing(textField: UITextField) -> Bool
     
     // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
-    @objc optional func textFieldDidEndEditing(_ textField: UITextField)
+    @objc optional func textFieldDidEndEditing(textField: UITextField)
     
     // return NO to not change text. Defaults to YES.
     @objc optional func textField(_ textField: UITextField, changeCharactersInRange range: NSRange, replacementString string: String) -> Bool
     
     // called when clear button pressed. return NO to ignore (no notifications)
-    @objc optional func textFieldShouldClear(_ textField: UITextField) -> Bool
+    @objc optional func textFieldShouldClear(textField: UITextField) -> Bool
     
     // called when 'return' key pressed. return NO to ignore.
-    @objc optional func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    @objc optional func textFieldShouldReturn(textField: UITextField) -> Bool
     
 }
 
