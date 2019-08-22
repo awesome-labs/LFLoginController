@@ -69,13 +69,19 @@ open class AutoCompleteTextField: UITextField {
     open var isRandomSuggestion: Bool = false
     
     /// Supported domain names
-    static open let domainNames: [String] = {
+    static public let domainNames: [String] = {
         return SupportedDomainNames
     }()
     
     /// Text font settings
     override open var font: UIFont? {
-        didSet { autoCompleteLbl.font = font }
+        didSet {
+            /// conditional implemented for nil checking b/c of nil error on file with swift 5.0
+            if autoCompleteLbl != nil {
+                autoCompleteLbl.font = font
+            }
+            
+        }
     }
     
     override open var textColor: UIColor? {
@@ -233,7 +239,7 @@ open class AutoCompleteTextField: UITextField {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byCharWrapping
         
-        let textAttributes: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font!, NSAttributedStringKey.paragraphStyle: paragraphStyle]
+        let textAttributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key.font: font!, NSAttributedString.Key.paragraphStyle: paragraphStyle]
         
         let drawingOptions: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
         

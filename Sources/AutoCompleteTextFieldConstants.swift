@@ -174,4 +174,4 @@ internal let SupportedDomainNames: [String] = {
 }()
 
 // MARK: - Public
-public typealias AutoCompleteButtonViewMode = UITextFieldViewMode
+public typealias AutoCompleteButtonViewMode = UITextField.ViewMode
